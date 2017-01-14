@@ -1,6 +1,7 @@
 class Son < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+
+  has_many :sponsorships, dependent: :destroy
+  has_many :families, through: :sponsorships
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 end
