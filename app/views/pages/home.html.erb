@@ -1,2 +1,56 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home-page-all">
+  <div class="banner">
+    <div id="navbar-homepage">
+      <%= render 'shared/navbar'%>
+    </div>
+    <div class="banner-content">
+      <h1 id="h1-home">Familles du cœur immaculé</h1>
+      <div class="arrow"></div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12" id="concept">
+          <h3 class="text-center">La mission</h3>
+          <p>Familles du Cœur Immaculé est né le 8 décembre 2005 dans le cœur d’une mère de famille française, qui s’est sentie appelée à conduire beaucoup d’autres familles à la Vierge, pour les placer sous la protection de son manteau.</p>
+          <p>Lors de la messe de la Toussaint du samedi 1er novembre, l’appel s’est confirmé, en y incluant les prêtres. Désormais, la Vierge appelle les familles et les prêtres à se consacrer à son Cœur Immaculé et à se placer sous son manteau protecteur, en se soutenant mutuellement par la prière.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper wrapper-home-grey">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12" id="project">
+          <h3 class="text-center">Le projet</h3>
+          <p>Il s’agit un partenariat spirituel entre les familles et les prêtres, chaque partie priant et soutenant l'autre dans son combat spirituel et pour sa vocation à la sainteté. Le principe est celui d'un parrainage mutuel, à la suite d'une consécration au Cœur Immaculé.</p>
+          <p>Les " Familles du Cœur Immaculé", après s'être consacrées (voir prière) en  début d’année, s'engagent pour un an renouvelable, à prier un Je vous salue Marie par jour pour la sainteté de leur filleul prêtre, et à assister à une messe par mois en priant spécialement pour cette intention. La famille a une grande liberté. Elle peut se consacrer en cours d’année, et chaque famille trouve l’organisation et le tempo qui lui convient. L’essentiel étant d’être fidèle à l’engagement et de durer. Le Je vous salue Marie peut être prié par un membre de la famille à tour de rôle, par chacun, avec un horaire synchronisé ou non, uniquement par les parents au nom de toute la famille, toutes les formules sont bonnes !</p>
+          <p>Les prêtres, "Fils du Cœur Immaculé" après s'être également consacrés (voir prière), s'engagent pour un an renouvelable, à célébrer ou assister (pour les diacres) à une messe le premier jeudi du mois, institution de l'Eucharistie, et à prier un Je vous salue Marie par jour, pour la sainteté de leur famille à la fois marraine et filleule.</p>
+          <p>La consécration au Cœur Immaculé est différente pour les familles et les prêtres. Elle correspond à leur vocation propre et au combat spirituel que chacun doit mener.</p>
+          <p>L'ensemble du projet est soutenu plus particulièrement dans la prière par un tandem famille-prêtre.  Le père Marie Michel, assure un tweet marial mensuel. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>
+function checkScroll(){
+    var startY = $('.navbar-wagon').height() * 3; //The point where the navbar changes in px
+
+    if($(window).scrollTop() > startY){
+        $('.navbar-wagon').addClass("scrolled");
+    }else{
+        $('.navbar-wagon').removeClass("scrolled");
+    }
+}
+
+if($('.navbar-wagon').length > 0){
+    $(window).on("scroll load resize", function(){
+        checkScroll();
+    });
+}
+</script>

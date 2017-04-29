@@ -1,4 +1,103 @@
-/* -------------------------------------
- * CSS code specific to home page
- * (margin/padding adjustments)
- * ------------------------------------- */
+h2, h3, h4 {
+  color: $grey-title;
+}
+
+h3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+p {
+  color: $grey-text;
+}
+
+p:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  padding-bottom: 40px;
+}
+
+#navbar-homepage .navbar-wagon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  position: fixed;
+  background: rgb(250, 250, 250);
+  background: rgba(250, 250, 250, 0);
+  box-shadow: none;
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  -ms-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+
+#navbar-homepage .navbar-wagon.scrolled {
+  background: rgb(68, 68, 68); //IE
+  background: rgba(0, 0, 0, 0.78); //NON-IE
+}
+
+.banner {
+  height: calc(100vh);
+  background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%),
+  url('homepage.png');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#h1-home {
+  margin: 0px;
+  color: white;
+}
+
+.arrow,
+.arrow:before {
+  position: absolute;
+  left: 50%;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  top: 95%;
+  margin: -20px 0 0 -20px;
+  -webkit-transform: rotate(45deg);
+  border-left: none;
+  border-top: none;
+  border-right: 2px #fff solid;
+  border-bottom: 2px #fff solid;
+}
+
+.arrow:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  margin: -15px 0 0 -15px;
+  border-left: none;
+  border-top: none;
+  border-right: 1px #fff solid;
+  border-bottom: 1px #fff solid;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(10px, 10px);
+  }
+}
+
+.wrapper-home-grey {
+  background-color: #F5F6F7;
+}
