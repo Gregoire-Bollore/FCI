@@ -1,6 +1,10 @@
 ---
 en:
   devise:
+    sessions:
+      new:
+        sign_in: Sign in
+  sons:
     confirmations:
       new:
         resend_confirmation_instructions: Resend confirmation instructions
