@@ -40,13 +40,16 @@
 
 .btn-navbar-sign-up {
   color: white;
-  margin-left: 30px;
   padding: 10px 15px;
   border-radius: 4px;
   border: none;
   font-weight: bold;
   background: #448EE5;
   transition: background 0.5s ease;
+}
+
+#btn-navbar-sign-up {
+  margin-left: 30px;
 }
 
 .btn-navbar-sign-up:hover {

@@ -1,0 +1,58 @@
+.btn-neutral {
+  color: #999999;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: none;
+  border: 1px solid;
+  font-weight: lighter;
+  background: none;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.btn-neutral:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #999999;
+}
+
+::placeholder {
+  font-weight: lighter;
+  font-style: italic;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    font-weight: lighter;
+    font-style: italic;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   font-weight: lighter;
+   font-style: italic;
+   opacity:  1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   font-weight: lighter;
+   font-style: italic;
+   opacity:  1;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   font-weight: lighter;
+   font-style: italic;
+}
+
+a:hover {text-decoration:none;}
+
+@media (max-width: 992px) {
+  .btn-connexion {
+    width: 180px;
+  }
+}
+
+@media (min-width: 993px) {
+  .btn-connexion {
+    width: 300px;
+  }
+}
