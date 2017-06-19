@@ -6,7 +6,7 @@
   border: 1px solid;
   font-weight: lighter;
   background: none;
-  opacity: 0.6;
+  opacity: 0.8;
   transition: all 0.3s ease;
 }
 
@@ -44,6 +44,34 @@
 }
 
 a:hover {text-decoration:none;}
+
+.form-group.date {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.row {
+  min-height: 51px;
+}
+
+.son_ordination_date .form-control {
+  border-radius: 2px;
+  -webkit-appearance: none;
+  margin-left: 15px;
+  color: #999999;
+}
+
+.date-flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.help-block {
+  color: #D23333;
+  font-style: italic;
+  font-size: 14px;
+}
 
 @media (max-width: 992px) {
   .btn-connexion {

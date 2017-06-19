@@ -60,7 +60,7 @@
 }
 
 .btn-navbar-sign-in {
-  color: white;
+  color: #999999;
   padding: 10px 15px;
   border-radius: 4px;
   border: none;
@@ -68,13 +68,23 @@
   font-weight: bold;
   background: none;
   transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+#navbar-homepage .btn-navbar-sign-in {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+#navbar-homepage .btn-navbar-sign-in:hover {
+  background: white;
+  color: black !important;
 }
 
 .btn-navbar-sign-in:hover {
   opacity: 1;
-  background: white;
-  color: black;
-  border-color: white !important;
+  color: #999999;
+  border-color: #999999 !important;
   text-decoration: none;
 }
 

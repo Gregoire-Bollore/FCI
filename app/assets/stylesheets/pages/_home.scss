@@ -133,6 +133,11 @@ p:not(:last-child) {
   width: 90px !important;
 }
 
+#family {
+  height: 50px !important;
+  width: 90px !important;
+}
+
 a {
   text-decoration: none !important;
 }
@@ -145,7 +150,7 @@ button a:hover {
   color: #999999;
 }
 
-#priest-button {
+.priest-button {
   display: flex;
   align-items: center;
   justify-content: space-around;

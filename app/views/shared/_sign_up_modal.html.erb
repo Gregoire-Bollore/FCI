@@ -6,14 +6,27 @@
         <h4 class="modal-title">Inscription</h4>
       </div>
       <div class="modal-body">
-        <p>One fine body&hellip;</p>
+        <div class="priest-button">
+          <div>
+            <%= image_tag "Family.png", {id: "family"}%>
+          </div>
+          <div>
+            <button class="btn-neutral"><%= link_to "S'inscrire en tant que famille",new_family_registration_path %></button>
+          </div>
+        </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+      <div class="modal-footer" style="background-color: #F5F6F7;">
+        <div class="priest-button">
+          <div>
+            <%= image_tag "Priest.png", {class: "img-circle", id: "priest"}%>
+          </div>
+          <div>
+            <button class="btn-neutral"><%= link_to "S'inscrire en tant que prêtre",new_son_registration_path %></button>
+          </div>
+        </div>
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
+    </div>
+  </div>
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
