@@ -1,4 +1,4 @@
-<h2 style="text-align: center; margin-bottom: 40px; margin-top: 0px;">Inscription en tant que retraitant</h2>
+<h2 style="text-align: center; margin-bottom: 40px; margin-top: 40px;">Inscription en tant que "fils du cœur immaculé"</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -50,7 +50,7 @@
 
   <div class="form-actions container">
     <div class="row">
-      <div class="col-xs-12 text-center"><%= f.button :submit, "Inscription", class: 'btn btn-primary btn-connexion', style: 'margin: 20px 0 20px 0;' %></div>
+      <div class="col-xs-12 text-center"><%= f.button :submit, "S'inscrire", class: 'btn-navbar-sign-up', style: 'margin: 20px 0 20px 0;' %></div>
     </div>
     <div class="row">
       <div class="col-xs-12 text-center"><%= render "sons/shared/links" %></div>
