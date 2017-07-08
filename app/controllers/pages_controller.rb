@@ -1,5 +1,4 @@
 class PagesController < ApplicationController
-  # skip_before_action :authenticate_family!, only: [ :home ]
 
   helper_method :resource_name, :resource, :devise_mapping
 
