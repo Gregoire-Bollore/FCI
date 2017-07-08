@@ -4,7 +4,6 @@ class PagesController < ApplicationController
   helper_method :resource_name, :resource, :devise_mapping
 
   def home
-    @son = Son.new
   end
 
   def resource_name
@@ -18,5 +17,4 @@ class PagesController < ApplicationController
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:family]
   end
-
 end
