@@ -10,6 +10,9 @@ gem 'devise'
 gem 'redis'
 gem 'devise-i18n'
 
+gem 'activeadmin'
+gem 'inherited_resources'
+
 gem 'sass-rails'
 gem 'jquery-rails'
 gem 'uglifier'
