@@ -10,6 +10,8 @@ gem 'devise'
 gem 'redis'
 gem 'devise-i18n'
 
+gem "geocoder"
+
 gem 'activeadmin'
 gem 'inherited_resources'
 
