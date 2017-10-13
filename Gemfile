@@ -11,6 +11,12 @@ gem 'redis'
 gem 'devise-i18n'
 
 gem "geocoder"
+gem "coffee-rails"
+gem "gmaps4rails"
+
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
 
 gem 'activeadmin'
 gem 'inherited_resources'
