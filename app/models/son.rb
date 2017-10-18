@@ -1,5 +1,7 @@
 class Son < ActiveRecord::Base
 
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
   has_many :sponsorships, dependent: :destroy
   has_many :families, through: :sponsorships
   devise :database_authenticatable, :registerable,
