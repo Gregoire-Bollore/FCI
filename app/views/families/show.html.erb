@@ -1,1 +1,25 @@
-<h1>Bonjour chère Famille du Cœur Immaculé</h1>
+<h1 style="text-align: center">Bonjour chère Famille du Cœur Immaculé</h1>
+<% if Sponsorship.where(:family_id == @family.id).present? %>
+  <p>Bonjour</p>
+<% else %>
+  <div class="container">
+    <h2 class="row">Fonctionnement</h2>
+    <p class="row">
+      Le bouton ci-dessous vous indique que vous êtes en attente d'attribution
+      d'un prêtre ou d'un diacre. Celui-ci aura accès à votre bio remplie lors de
+      votre inscription, aux prénoms et âges des membres de votre famille ainsi
+      qu'à votre localisation. Vous aurez quant à vous accès à sa bio, son prénom
+      et sa localisation.
+    </p>
+    <p class="row">
+      Dans un souci de simplicité, le site suggère une attribution entre famille
+      et prêtre / diacre qui assure une certaine distance géographique, afin de
+      garantir que la relation entre les Fils et les Familles du Cœur Immaculé se
+      limite à une relation de prière.
+    </p>
+    <p class="row">
+      Vous recevrez automatiquement un mail lorsqu'un prêtre ou un diacre vous
+      sera attribué.
+    </p>
+  </div>
+<% end %>
