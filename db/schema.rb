@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171018165849) do
+ActiveRecord::Schema.define(version: 20171024140331) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -106,6 +106,7 @@ ActiveRecord::Schema.define(version: 20171018165849) do
     t.text     "bio"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "level"
   end
 
   add_index "sons", ["email"], name: "index_sons_on_email", unique: true, using: :btree
