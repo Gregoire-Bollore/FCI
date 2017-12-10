@@ -27,7 +27,7 @@
           <h3 class="text-center">Le projet</h3>
           <p>Il s’agit un partenariat spirituel entre les familles et les prêtres / diacres, chaque partie priant et soutenant l'autre dans son combat spirituel et pour sa vocation à la sainteté. Le principe est celui d'un parrainage mutuel, à la suite d'une consécration au Cœur Immaculé.</p>
           <p>Les " Familles du Cœur Immaculé", après s'être consacrées (voir prière) en  début d’année, s'engagent pour un an renouvelable, à prier un Je vous salue Marie par jour pour la sainteté de leur filleul prêtre ou diacre, et à assister à une messe par mois en priant spécialement pour cette intention. La famille a une grande liberté. Elle peut se consacrer en cours d’année, et chaque famille trouve l’organisation et le tempo qui lui convient. L’essentiel étant d’être fidèle à l’engagement et de durer. Le Je vous salue Marie peut être prié par un membre de la famille à tour de rôle, par chacun, avec un horaire synchronisé ou non, uniquement par les parents au nom de toute la famille, toutes les formules sont bonnes !</p>
-          <p>Les prêtres / diacres, "Fils du Cœur Immaculé" après s'être également consacrés (voir prière), s'engagent pour un an renouvelable, à célébrer ou assister (pour les diacres/diacres) à une messe le premier jeudi du mois, institution de l'Eucharistie, et à prier un Je vous salue Marie par jour, pour la sainteté de leur famille à la fois marraine et filleule.</p>
+          <p>Les prêtres / diacres, "Fils du Cœur Immaculé" après s'être également consacrés (voir prière), s'engagent pour un an renouvelable, à célébrer ou assister (pour les diacres) à une messe le premier jeudi du mois, institution de l'Eucharistie, et à prier un Je vous salue Marie par jour, pour la sainteté de leur famille à la fois marraine et filleule.</p>
           <p>La consécration au Cœur Immaculé est différente pour les familles et les prêtres / diacres. Elle correspond à leur vocation propre et au combat spirituel que chacun doit mener.</p>
           <p>L'ensemble du projet est soutenu plus particulièrement dans la prière par un tandem famille-prêtre.  Le père Marie Michel, assure un tweet marial mensuel. </p>
           <div class="text-center">
@@ -66,7 +66,9 @@ function checkScroll(){
         $('.navbar-wagon').removeClass("scrolled");
     }
 }
-
+setTimeout(function(){
+  $(".alert").remove();
+}, 5000);
 if($('.navbar-wagon').length > 0){
     $(window).on("scroll load resize", function(){
         checkScroll();

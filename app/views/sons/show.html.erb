@@ -1,1 +1,86 @@
-<h1>Bonjour cher Fils du Cœur Immaculé</h1>
+<div class="row">
+  <div class="col-xs-offset-1 col-xs-10">
+    <div class="text-center">
+      <h1>Bonjour cher Fils du Cœur Immaculé</h1>
+      <% if Sponsorship.exists?(son_id: @son.id) %>
+        <p>Une famille vous a été attribuée. Vous portez ainsi un engagement de soutien spirituel vis-à-vis d'elle.</p>
+        <div class="solid-border">
+          <div class="family-recap" style="border: 1px solid #3B77C7; padding: 15px;">
+            <p class="text-center">Récapitulatif des informations de la famille dont vous êtes la parrain :</p><br/>
+            <%= simple_format(auto_link("#{@family.bio}", :html => { :target => '_blank' })) %>
+          </div>
+        </div>
+      <% else %>
+        <p>Une famille dont vous serez le parrain va vous être attribuée sous peu.
+        <br>Vous recevrez sous peu un e-mail vous informant de l'attribution d'une famille, accompagné d'une rapide présentation.
+        </p>
+      <% end %>
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+              <a style="text-decoration: none !important;" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Récapitulatif de votre profil
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+              <div>
+                <div class="row">
+                  <div class="col-xs-6 text-right">
+                    <p><strong>Prénom :</strong></p>
+                  </div>
+                  <div class="col-xs-6 text-left">
+                    <%= @son.first_name %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6 text-right">
+                    <p><strong>Nom :</strong></p>
+                  </div>
+                  <div class="col-xs-6 text-left">
+                    <%= @son.last_name %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6 text-right">
+                    <p><strong>Situation :</strong></p>
+                  </div>
+                  <div class="col-xs-6 text-left">
+                    <%= @son.level %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6 text-right">
+                    <p><strong>Date d'ordination :</strong></p>
+                  </div>
+                  <div class="col-xs-6 text-left">
+                    <%= @son.ordination_date.strftime("%d/%m/%Y") %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6 text-right">
+                    <p><strong>Adresse :</strong></p>
+                  </div>
+                  <div class="col-xs-6 text-left">
+                    <%= @son.address %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6 text-right">
+                    <p><strong>Votre bio :</strong></p>
+                  </div>
+                  <div class="col-xs-6 text-left">
+                    <%= @son.bio %>
+                  </div>
+                </div>
+              </div>
+              <%= link_to "Modifier mon compte", edit_son_registration_path, style: 'margin: 20px; text-decoration: none;' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
