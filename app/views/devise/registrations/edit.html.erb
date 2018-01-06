@@ -1,30 +1,73 @@
-<h2><%= t(".title", resource: resource_class.model_name.human) %></h2>
+<h2 style="text-align: center; margin-bottom: 40px; margin-top: 40px;">Modifier mon compte</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
+  <div class="form-inputs container">
+
+    <div class="row">
+      <div class="col-xs-6"><%= f.input :last_name, required: false, label: false %></div>
+      <div class="col-xs-6"><%= f.input :first_names_and_ages, required: false, label: false %></div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6"><%= f.input :email, required: false, label: false %></div>
+    </div>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>
-        <%= t(".currently_waiting_confirmation_for_email", email: resource.unconfirmed_email) %>
-      </p>
+      <p>En attente de confirmation : <%= resource.unconfirmed_email %></p>
     <% end %>
 
-    <%= f.input :password, autocomplete: "off", hint: t(".leave_blank_if_you_don_t_want_to_change_it"), required: false %>
-    <%= f.input :password_confirmation, required: false %>
-    <%= f.input :current_password, hint: t(".we_need_your_current_password_to_confirm_your_changes"), required: true %>
+    <div class="row">
+      <div class="col-xs-6">
+        <%= f.input :password, autocomplete: "off", hint: "Laissez vide si vous ne souhaitez pas le changer", required: false, label: false, placeholder: 'Nouveau mot de passe' %>
+      </div>
+      <div class="col-xs-6">
+        <%= f.input :password_confirmation, required: false, label: false, placeholder: 'Confirmation du nouveau mot de passe' %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6"><%= f.input :address, input_html: { id: 'user_input_autocomplete_address', class: 'form-control' }, placeholder: 'Commencez à taper votre adresse', label: false %></div>
+      <div class="col-xs-6"><%= f.input :postal_code, input_html: { id: 'postal_code', class: 'form-control' }, placeholder: 'Code postal', label: false, readonly: true %></div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6"><%= f.input :locality, input_html: { id: 'locality', class: 'form-control' }, placeholder: 'Ville', label: false, readonly: true %></div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12"><%= f.input :bio, required: false, label: false %></div>
+    </div>
+
+    <div class="hidden" >
+      <%= f.input :street_number, input_html: { id: 'street_number', class: 'form-control' } %>
+      <%= f.input :route, input_html: { id: 'route', class: 'form-control' } %>
+      <%= f.input :administrative_area_level_1, input_html: { id: 'administrative_area_level_1', class: 'form-control' } %>
+      <%= f.input :country, input_html: { id: 'country', class: 'form-control' }, as: 'string' %>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-offset-3 col-xs-6">
+        <%= f.input :current_password, hint: "Nous avons besoin de votre mot de passe afin de confirmer les modifications", required: false, label: false, placeholder: 'Mot de passe actuel' %>
+      </div>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, t(".update") %>
+  <div class="form-actions container">
+    <div class="row">
+      <div class="col-xs-12 text-center"><%= f.button :submit, "Mettre à jour", class: 'btn btn-primary btn-connexion', style: 'margin: 20px 0 20px 0;' %></div>
+    </div>
   </div>
 <% end %>
 
-<h3><%= t(".cancel_my_account") %></h3>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-offset-3 col-xs-6 text-center">
+      <p>Insatisfait ? <%= link_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Êtes-vous sûr ?" }, method: :delete, style: 'text-decoration: none;' %></p>
 
-<p><%= t(".unhappy") %> <%= link_to t(".cancel_my_account"), registration_path(resource_name), data: { confirm: t(".are_you_sure") }, method: :delete %></p>
-
-<%= link_to t("devise.shared.links.back"), :back %>
+      <%= link_to "Retour", :back, style: 'text-decoration: none;' %>
+    </div>
+  </div>
+</div>
 <%= javascript_include_tag 'autocomplete' %>

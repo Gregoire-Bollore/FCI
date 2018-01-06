@@ -1,26 +1,81 @@
-<h1 style="text-align: center">Bonjour chère Famille du Cœur Immaculé</h1>
-<% if Sponsorship.where(:family_id == @family.id).present? %>
-  <p>Bonjour</p>
-<% else %>
-  <div class="container">
-    <h2 class="row">Fonctionnement</h2>
-    <p class="row">
-      Le bouton ci-dessous vous indique que vous êtes en attente d'attribution
-      d'un prêtre ou d'un diacre. Celui-ci aura accès à votre bio remplie lors de
-      votre inscription, aux prénoms et âges des membres de votre famille ainsi
-      qu'à votre localisation. Vous aurez quant à vous accès à sa bio, son prénom
-      et sa localisation.
-    </p>
-    <p class="row">
-      Dans un souci de simplicité, le site suggère une attribution entre famille
-      et prêtre / diacre qui assure une certaine distance géographique, afin de
-      garantir que la relation entre les Fils et les Familles du Cœur Immaculé se
-      limite à une relation de prière.
-    </p>
-    <p class="row">
-      Vous recevrez automatiquement un mail lorsqu'un prêtre ou un diacre vous
-      sera attribué.
-    </p>
-    <button class="btn btn-warning" style="">Vous êtes en attente de l'attribution d'un prêtre ou d'un diacre</button>
+<div class="row">
+  <div class="col-xs-offset-1 col-xs-10">
+    <div class="text-center">
+      <h1>Bonjour chère Famille du Cœur Immaculé</h1>
+      <% if Sponsorship.where(:family_id == @family.id).present? %>
+        <p>Bonjour</p>
+      <% else %>
+        <h2 class="row">Fonctionnement</h2>
+        <p class="row">
+          Le bouton ci-dessous vous indique que vous êtes en attente d'attribution
+          d'un prêtre ou d'un diacre. Celui-ci aura accès à votre bio remplie lors de
+          votre inscription, aux prénoms et âges des membres de votre famille ainsi
+          qu'à votre localisation. Vous aurez quant à vous accès à sa bio, son prénom
+          et sa localisation.
+        </p>
+        <p class="row">
+          Dans un souci de simplicité, le site suggère une attribution entre famille
+          et prêtre / diacre qui assure une certaine distance géographique, afin de
+          garantir que la relation entre les Fils et les Familles du Cœur Immaculé se
+          limite à une relation de prière et de soutien spirituel.
+        </p>
+        <p class="row">
+          Vous recevrez automatiquement un mail lorsqu'un prêtre ou un diacre vous
+          sera attribué.
+        </p>
+        <button class="btn btn-warning text-center" style="margin-bottom: 40px">Vous êtes en attente de l'attribution d'un prêtre ou d'un diacre</button>
+      <% end %>
+
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+              <a style="text-decoration: none !important;" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Récapitulatif de votre profil
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+              <div>
+                <div class="row">
+                  <div class="col-xs-6 text-right">
+                    <p><strong>Nom :</strong></p>
+                  </div>
+                  <div class="col-xs-6 text-left">
+                    <%= @family.last_name %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6 text-right">
+                    <p><strong>Situation familiale :</strong></p>
+                  </div>
+                  <div class="col-xs-6 text-left">
+                    <%= @family.first_names_and_ages %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6 text-right">
+                    <p><strong>Adresse :</strong></p>
+                  </div>
+                  <div class="col-xs-6 text-left">
+                    <%= @family.address %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6 text-right">
+                    <p><strong>Votre bio :</strong></p>
+                  </div>
+                  <div class="col-xs-6 text-left">
+                    <%= @family.bio %>
+                  </div>
+                </div>
+              </div>
+              <%= link_to "Modifier mon compte", edit_family_registration_path, style: 'margin: 20px; text-decoration: none;' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-<% end %>
+</div>
