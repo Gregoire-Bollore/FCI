@@ -3,7 +3,24 @@
     <div class="text-center">
       <h1>Bonjour chère Famille du Cœur Immaculé</h1>
       <% if Sponsorship.where(:family_id == @family.id).present? %>
-        <p>Bonjour</p>
+
+        <hr>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-offset-1 col-xs-10 text-left">
+              <h4 style="margin-bottom: 22px; margin-top: 0px;">Informations sur le <%= @family_son.level.downcase %> dont vous avez la responsabilité spirituelle :</h4>
+              <p><%= @family_son.level %> depuis le <%= @family_son.ordination_date.strftime("%d/%m/%Y") %></p>
+              </break>
+              <p>Sa biographie</p>
+              </break>
+              <p><%= @family_son.bio %></p>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
       <% else %>
         <h2 class="row">Fonctionnement</h2>
         <p class="row">
