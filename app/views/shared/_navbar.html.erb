@@ -10,14 +10,6 @@
     <!-- Different navigation if login or not -->
     <% if family_signed_in? %>
 
-      <!-- Notification -->
-      <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
-        <div class="badge-container">
-          <i class="fa fa-envelope-o"></i>
-          <div class="badge badge-blue">3</div>
-        </div>
-      <% end %>
-
       <!-- Profile picture and dropdown -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
@@ -25,6 +17,13 @@
             <%= current_family.last_name %> <span class="caret"></span>
           </div>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <% if current_family.admin %>
+              <li>
+                <%= link_to admin_root_path(current_family) do %>
+                  <i class="fa fa-cogs"></i> <%= t(".dashboard", default: "Dashboard") %>
+                <% end %>
+              </li>
+            <% end %>
             <li>
               <%= link_to family_path(current_family) do %>
                 <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
@@ -45,14 +44,6 @@
       </div>
 
     <% elsif son_signed_in? %>
-
-      <!-- Notification -->
-      <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
-        <div class="badge-container">
-          <i class="fa fa-envelope-o"></i>
-          <div class="badge badge-blue">3</div>
-        </div>
-      <% end %>
 
       <!-- Profile picture and dropdown -->
     <div class="navbar-wagon-item">
