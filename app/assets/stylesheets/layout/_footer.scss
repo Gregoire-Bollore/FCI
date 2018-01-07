@@ -1,1 +1,35 @@
 // Your footer style
+#footer {
+  height: 70px;
+  background: #24445C;
+  padding: 10px 0;
+  color: #CCCCCC;
+  display: flex;
+  align-items: center;
+}
+
+#footer .row {
+  display: flex;
+  align-items: center;
+}
+
+#footer ul {
+  margin-top: 10px;
+}
+
+#footer .social a {
+  color: #CCCCCC;
+  font-size: 30px;
+  letter-spacing: 20px;
+  transition: color 0.5s ease;
+}
+
+#footer a {
+  color: #CCCCCC;
+  font-size: 15px;
+  transition: color 0.5s ease;
+}
+
+#footer a:hover{
+  color: $yellow;
+}
