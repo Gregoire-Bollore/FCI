@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   resources :families
 
   get 'team', to: 'pages#team'
-  get 'sons-prayer', to: 'pages#sons-prayer'
-  get 'families-prayer', to: 'pages#families-prayer'
+  get 'sons_prayer', to: 'pages#sons_prayer'
+  get 'families_prayer', to: 'pages#families_prayer'
 end
