@@ -1,5 +1,5 @@
 class Son < ActiveRecord::Base
-
+  after_create :attribute_family
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
   has_many :sponsorships, dependent: :destroy
@@ -13,4 +13,11 @@ class Son < ActiveRecord::Base
   def name
     "#{first_name} #{last_name}"
   end
+
+  private
+
+  def attribute_family
+    Sponsorship.create
+  end
+
 end
