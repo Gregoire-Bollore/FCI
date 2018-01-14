@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171024140331) do
+ActiveRecord::Schema.define(version: 20180114150008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -115,9 +115,9 @@ ActiveRecord::Schema.define(version: 20171024140331) do
   create_table "sponsorships", force: :cascade do |t|
     t.integer  "family_id"
     t.integer  "son_id"
-    t.string   "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "approved",   default: false, null: false
   end
 
   add_index "sponsorships", ["family_id"], name: "index_sponsorships_on_family_id", using: :btree
