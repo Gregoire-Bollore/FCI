@@ -94,4 +94,10 @@ if($('.navbar-wagon').length > 0){
         checkScroll();
     });
 }
+
+  $(document).ready(function(){
+    $('#sign-in').on('shown.bs.modal', function() {
+      $('#family_email').focus();
+    });
+  });
 </script>
