@@ -75,6 +75,14 @@
   color: white;
 }
 
+.modal-content .boolean {
+  color: $grey-text;
+}
+
+.modal-content a {
+  color: $grey-text;
+}
+
 @media (max-width: 992px) {
   .btn-connexion {
     width: 180px;

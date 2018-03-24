@@ -6,8 +6,8 @@
   <div class="form-inputs container">
 
     <div class="row">
-      <div class="col-xs-6"><%= f.input :first_name, required: true, autofocus: true, placeholder: "Prénom", label: false %></div>
-      <div class="col-xs-6"><%= f.input :last_name, required: true, placeholder: "Nom de famille – Ne sera pas communiqué", label: false %></div>
+      <div class="col-xs-12 col-sm-6"><%= f.input :first_name, required: true, autofocus: true, placeholder: "Prénom", label: false %></div>
+      <div class="col-xs-12 col-sm-6"><%= f.input :last_name, required: true, placeholder: "Nom de famille – Ne sera pas communiqué", label: false %></div>
     </div>
 
     <div class="row">
@@ -35,7 +35,7 @@
     </div>
 
     <div class="row ">
-      <div class="col-xs-offset-3 col-xs-6">
+      <div class="col-sm-offset-3 col-sm-6 col-xs-12">
         <%= f.input :bio, required: true, placeholder: "Petite présentation rapide", label: false %>
       </div>
     </div>
