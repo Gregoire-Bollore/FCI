@@ -11,7 +11,8 @@
     </div>
 
     <div class="row">
-      <div class="col-xs-6"><%= f.input :email, required: false, label: false %></div>
+      <div class="col-xs-12 col-sm-6"><%= f.input :email, required: false, label: false %></div>
+      <div class="col-xs-12 col-sm-6"><%= f.input :phone_number, required: false, label: false %></div>
     </div>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -19,30 +20,30 @@
     <% end %>
 
     <div class="row">
-      <div class="col-xs-6">
+      <div class="col-xs-12 col-sm-6">
         <%= f.input :password, autocomplete: "off", hint: "Laissez vide si vous ne souhaitez pas le changer", required: false, label: false, placeholder: 'Nouveau mot de passe' %>
       </div>
-      <div class="col-xs-6">
+      <div class="col-xs-12 col-sm-6">
         <%= f.input :password_confirmation, required: false, label: false, placeholder: 'Confirmation du nouveau mot de passe' %>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-xs-6"><%= f.input :address, input_html: { id: 'user_input_autocomplete_address', class: 'form-control' }, placeholder: 'Commencez à taper votre adresse', label: false %></div>
-      <div class="col-xs-6"><%= f.input :postal_code, input_html: { id: 'postal_code', class: 'form-control' }, placeholder: 'Code postal', label: false, readonly: true %></div>
+      <div class="col-xs-12 col-sm-6"><%= f.input :address, input_html: { id: 'user_input_autocomplete_address', class: 'form-control' }, placeholder: 'Commencez à taper votre adresse', label: false %></div>
+      <div class="col-xs-12 col-sm-6"><%= f.input :postal_code, input_html: { id: 'postal_code', class: 'form-control' }, placeholder: 'Code postal', label: false, readonly: true %></div>
     </div>
 
     <div class="row">
-      <div class="col-xs-6"><%= f.input :locality, input_html: { id: 'locality', class: 'form-control' }, placeholder: 'Ville', label: false, readonly: true %></div>
+      <div class="col-xs-12 col-sm-6"><%= f.input :locality, input_html: { id: 'locality', class: 'form-control' }, placeholder: 'Ville', label: false, readonly: true %></div>
     </div>
 
     <% if @son.level == "Diacre" %>
       <div class="row">
-        <div class="col-xs-6 date-flexbox">
+        <div class="col-xs-12 col-sm-6 date-flexbox">
           <div style="color: white;">Date d'ordination :</div>
           <div><%= f.input :ordination_date, :as => :date, :order => [ :day, :month, :year], :required => true, label: false %></div>
         </div>
-        <div class="col-xs-6" style="color: white;">Vous êtes :<%= f.input :level, :collection => ["Prêtre","Diacre"], :as => :radio_buttons, :item_wrapper_class => 'inline', label: false %></div>
+        <div class="col-xs-12 col-sm-6" style="color: white;">Vous êtes :<%= f.input :level, :collection => ["Prêtre","Diacre"], :as => :radio_buttons, :item_wrapper_class => 'inline', label: false %></div>
       </div>
     <% end %>
 
@@ -58,7 +59,7 @@
     </div>
 
     <div class="row">
-      <div class="col-xs-offset-3 col-xs-6">
+      <div class="col-xs-offset-3 col-xs-12 col-sm-6">
         <%= f.input :current_password, hint: "Nous avons besoin de votre mot de passe afin de confirmer les modifications", required: false, label: false, placeholder: 'Mot de passe actuel' %>
       </div>
     </div>
