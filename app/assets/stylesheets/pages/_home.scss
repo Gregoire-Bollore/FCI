@@ -62,12 +62,17 @@ p:not(:last-child) {
   url('homepage.png');
   background-size: cover;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.main-logo {
+  width: 25%;
 }
 
 #h1-home {
   margin: 0px;
+  margin-bottom: 120px;
   color: white;
 }
 
