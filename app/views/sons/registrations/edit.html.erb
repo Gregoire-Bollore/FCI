@@ -39,10 +39,10 @@
     <% if @son.level == "Diacre" %>
       <div class="row">
         <div class="col-xs-6 date-flexbox">
-          <div style="color: #999999;">Date d'ordination :</div>
+          <div style="color: white;">Date d'ordination :</div>
           <div><%= f.input :ordination_date, :as => :date, :order => [ :day, :month, :year], :required => true, label: false %></div>
         </div>
-        <div class="col-xs-6" style="color: #999999;">Vous êtes :<%= f.input :level, :collection => ["Prêtre","Diacre"], :as => :radio_buttons, :item_wrapper_class => 'inline', label: false %></div>
+        <div class="col-xs-6" style="color: white;">Vous êtes :<%= f.input :level, :collection => ["Prêtre","Diacre"], :as => :radio_buttons, :item_wrapper_class => 'inline', label: false %></div>
       </div>
     <% end %>
 

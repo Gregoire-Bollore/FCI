@@ -66,14 +66,34 @@ p:not(:last-child) {
   flex-direction: column;
 }
 
-.main-logo {
-  width: 25%;
+
+@media (max-width: 700px) {
+  .main-logo {
+    width: 40%;
+  }
+}
+
+@media (min-width: 701px) {
+  .main-logo {
+    width: 25%;
+  }
 }
 
 #h1-home {
   margin: 0px;
-  margin-bottom: 120px;
   color: white;
+}
+
+@media (max-width: 700px) {
+  #h1-home {
+    margin-bottom: 160px;
+  }
+}
+
+@media (min-width: 701px) {
+  #h1-home {
+    margin-bottom: 120px;
+  }
 }
 
 .arrow,
@@ -153,6 +173,12 @@ p:not(:last-child) {
 
 a {
   text-decoration: none !important;
+  color: white;
+}
+
+a:hover {
+  text-decoration:none;
+  color: $turquoise;
 }
 
 .btn-home {
