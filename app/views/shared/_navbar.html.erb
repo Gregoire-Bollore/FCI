@@ -84,9 +84,29 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+        <p style="color: $turquoise; text-align: center;">Familles</p>
+        <li style="text-align: center;">
+          <%= link_to new_family_registration_path do %>
+            <%= 'Créer un compte' %>
+          <% end %>
+        </li>
+        <li style="text-align: center;">
+          <%= link_to new_family_session_path do %>
+            <%= 'Connexion' %>
+          <% end %>
+        </li>
+        <hr>
+        <p style="color: $turquoise; text-align: center;">Prêtres / diacres</p>
+        <li style="text-align: center;">
+          <%= link_to new_son_registration_path do %>
+            <%= 'Créer un compte' %>
+          <% end %>
+        </li>
+        <li style="text-align: center;">
+          <%= link_to new_son_session_path do %>
+            <%= 'Connexion' %>
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>
