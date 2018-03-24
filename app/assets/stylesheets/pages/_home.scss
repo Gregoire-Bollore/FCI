@@ -1,6 +1,6 @@
 h2, h3, h4 {
   margin-top: 0px !important;
-  color: $grey-title;
+  color: white;
 }
 
 h3 {
@@ -9,7 +9,7 @@ h3 {
 }
 
 p {
-  color: $grey-text;
+  color: white;
 }
 
 p:not(:last-child) {
@@ -119,8 +119,12 @@ p:not(:last-child) {
   }
 }
 
-.wrapper-home-grey {
-  background-color: #F5F6F7;
+.wrapper-home-dark {
+  background-color: $dark-blue;
+}
+
+.wrapper-home-light {
+  background-color: $light-blue;
 }
 
 .dropdown-menu li > a {
@@ -149,6 +153,17 @@ p:not(:last-child) {
 
 a {
   text-decoration: none !important;
+}
+
+.btn-home {
+  background-color: $turquoise;
+  color: white;
+}
+
+.btn-home:hover {
+  color: white;
+  background-color: $turquoise-darker;
+  transition: background-color 0.5s ease;
 }
 
 button a {
