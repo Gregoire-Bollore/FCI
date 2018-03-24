@@ -67,13 +67,13 @@ p:not(:last-child) {
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   .main-logo {
     width: 40%;
   }
 }
 
-@media (min-width: 701px) {
+@media (min-width: 501px) {
   .main-logo {
     width: 25%;
   }
@@ -84,13 +84,13 @@ p:not(:last-child) {
   color: white;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   #h1-home {
     margin-bottom: 160px;
   }
 }
 
-@media (min-width: 701px) {
+@media (min-width: 501px) {
   #h1-home {
     margin-bottom: 120px;
   }
