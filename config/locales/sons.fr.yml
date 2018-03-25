@@ -32,7 +32,7 @@ fr:
     models:
       user: Famille du cœur immaculé
       son: Fils du cœur immaculé
-  devise:
+  sons:
     confirmations:
       confirmed: Votre compte a été confirmé avec succès.
       new:
