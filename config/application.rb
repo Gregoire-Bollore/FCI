@@ -21,6 +21,8 @@ module FCI
       generate.assets false
     end
 
+    config.action_mailer.delivery_method = :postmark
+    config.action_mailer.postmark_settings = { :api_token => "21e84884-ddad-42de-b220-614fc9cf1d5a" }
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

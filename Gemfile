@@ -10,6 +10,8 @@ gem 'devise'
 gem 'redis'
 gem 'devise-i18n'
 
+gem 'postmark-rails'
+
 gem "geocoder"
 gem "coffee-rails"
 gem "gmaps4rails"
