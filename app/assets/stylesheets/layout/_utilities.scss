@@ -28,3 +28,29 @@
   min-height: calc(100vh - 130px - 70px);
   background-color: $light-blue;
 }
+
+#collapseOne {
+  color: $grey-text;
+}
+
+#collapseOne p {
+  color: $grey-title;
+}
+
+.panel-title {
+  color: $turquoise;
+}
+
+.panel-body a {
+  color: $turquoise;
+}
+
+.panel a:hover {
+  color: $turquoise-darker;
+  transition: color 0.3s ease;
+}
+
+.panel-body a:hover {
+  color: $turquoise-darker;
+  transition: color 0.3s ease;
+}

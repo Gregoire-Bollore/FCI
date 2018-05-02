@@ -81,11 +81,23 @@
 
 /* Navbar standard link */
 .navbar-wagon-link {
-  color: #616668;
+  color: white;
   font-size: 14px;
 }
+
+.navbar-wagon-link-not-home {
+  color: white;
+  font-size: 14px;
+}
+
 .navbar-wagon-link:hover {
   color: #448EE5;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.navbar-wagon-link-not-home:hover {
+  color: $turquoise-darker;
   text-decoration: none;
   transition: all 0.5s ease;
 }

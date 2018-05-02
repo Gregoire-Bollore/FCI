@@ -1,7 +1,7 @@
 <p>
-  Un nouveau <%= @son.level.lowercase %> vient de s'inscrire sur FCI.<br/>
+  Un nouveau <%= @son.level.downcase %> vient de s'inscrire sur FCI.<br/>
   <br/>
-  Voici ci-dessous les informations concernant le <%= @son.level.lowercase %> :
+  Voici ci-dessous les informations concernant le <%= @son.level.downcase %> :
   <br/>
     <p><strong>Prénom et nom : </strong><%= @son.first_name %> <%= @son.last_name %></p>
     <p><strong><%= @son.level %> depuis le : </strong><%= @son.ordination_date.strftime("%d/%m/%Y") %></p>

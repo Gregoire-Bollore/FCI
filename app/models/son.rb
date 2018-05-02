@@ -7,7 +7,7 @@ class Son < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates :first_name, :last_name, :level, :ordination_date, :address, :street_number, :route, :postal_code, :locality, :administrative_area_level_1, :country, :bio, presence: true
+  validates :first_name, :last_name, :level, :ordination_date, :phone_number, :address, :street_number, :route, :postal_code, :locality, :administrative_area_level_1, :country, :bio, presence: true
   validates :email, uniqueness: true
 
 

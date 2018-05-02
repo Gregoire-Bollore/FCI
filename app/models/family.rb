@@ -7,7 +7,7 @@ class Family < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  # validates :last_name, :first_names_and_ages, :address, :street_number, :route, :postal_code, :locality, :administrative_area_level_1, :country, :bio, presence: true
+  validates :last_name, :first_names_and_ages, :phone_number, :address, :street_number, :route, :postal_code, :locality, :administrative_area_level_1, :country, :bio, presence: true
   validates :email, uniqueness: true
 
   private

@@ -22,6 +22,7 @@ p:not(:last-child) {
 
 .top-title {
   padding-top: 40px;
+  color: white;
 }
 
 .wrapper {
@@ -188,11 +189,13 @@ a:hover {
 .btn-home {
   background-color: $turquoise;
   color: white;
+  border: none !important;
 }
 
 .btn-home:hover {
   color: white;
   background-color: $turquoise-darker;
+  border: none !important;
   transition: background-color 0.5s ease;
 }
 
