@@ -14,7 +14,7 @@ class FamilyMailer < ApplicationMailer
 
   def inform(family)
     @family = family
-    mail(to: 'famillesducoeurimmacule@gmail.com', subject: "Nouvelle inscription d'une famille - Famille #{@family.last_name}")
+    mail(to: 'contact@famillesducoeurimmacule.com', subject: "Nouvelle inscription d'une famille - Famille #{@family.last_name}")
   end
 
 end

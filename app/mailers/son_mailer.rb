@@ -14,7 +14,7 @@ class SonMailer < ApplicationMailer
 
   def inform(son)
     @son = son
-    mail(to: 'famillesducoeurimmacule@gmail.com', subject: "Nouvelle inscription d'un prêtre / diacre - #{@son.first_name} #{@son.last_name}")
+    mail(to: 'contact@famillesducoeurimmacule.com', subject: "Nouvelle inscription d'un prêtre / diacre - #{@son.first_name} #{@son.last_name}")
   end
 
 end
