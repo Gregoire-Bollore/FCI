@@ -20,23 +20,23 @@
             <% if current_family.admin %>
               <li>
                 <%= link_to admin_root_path(current_family) do %>
-                  <i class="fa fa-cogs"></i> <%= t(".dashboard", default: "Dashboard") %>
+                  <i class="fa fa-cogs"></i> <%= t(".dashboard", default: "Tableau de bord") %>
                 <% end %>
               </li>
             <% end %>
             <li>
               <%= link_to family_path(current_family) do %>
-                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
+                <i class="fa fa-user"></i> <%= t(".profile", default: "Profil") %>
               <% end %>
             </li>
             <li>
               <%= link_to root_path do %>
-                <i class="fa fa-home"></i>  <%= t(".home", default: "Home") %>
+                <i class="fa fa-home"></i>  <%= t(".home", default: "Accueil") %>
               <% end %>
             </li>
             <li>
               <%= link_to destroy_family_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Déconnexion") %>
               <% end %>
             </li>
           </ul>
@@ -48,23 +48,23 @@
       <!-- Profile picture and dropdown -->
     <div class="navbar-wagon-item">
       <div class="dropdown">
-        <div class="dropdown-toggle navbar-wagon-link" data-toggle="dropdown">
+        <div class="dropdown-toggle navbar-wagon-link-not-home" data-toggle="dropdown">
           <%= current_son.last_name %> <span class="caret"></span>
         </div>
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
           <li>
             <%= link_to son_path(current_son) do %>
-              <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
+              <i class="fa fa-user"></i> <%= t(".profile", default: "Profil") %>
             <% end %>
           </li>
           <li>
             <%= link_to root_path do %>
-              <i class="fa fa-home"></i>  <%= t(".home", default: "Home") %>
+              <i class="fa fa-home"></i>  <%= t(".home", default: "Accueil") %>
             <% end %>
           </li>
           <li>
             <%= link_to destroy_son_session_path, method: :delete do %>
-              <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+              <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Déconnexion") %>
             <% end %>
           </li>
         </ul>

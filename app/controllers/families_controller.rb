@@ -4,7 +4,7 @@ class FamiliesController < ApplicationController
   def show
     @family = current_family
 
-    if Sponsorship.where(:family_id == @family.id).present?
+    if Sponsorship.where(:family_id => @family.id).present?
       @family_son = @family.sponsorship.son
     end
   end

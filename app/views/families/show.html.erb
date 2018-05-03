@@ -2,7 +2,7 @@
   <div class="col-xs-offset-1 col-xs-10">
     <div class="text-center">
       <h1 class="top-title">Bonjour chère Famille du Cœur Immaculé</h1>
-      <% if Sponsorship.where(:family_id == @family.id).present? %>
+      <% if Sponsorship.exists?(family_id: @family.id) %>
 
         <hr>
 
@@ -22,13 +22,10 @@
         <hr>
 
       <% else %>
-        <h2 class="row">Fonctionnement</h2>
         <p class="row">
-          Le bouton ci-dessous vous indique que vous êtes en attente d'attribution
-          d'un prêtre ou d'un diacre. Celui-ci aura accès à votre bio remplie lors de
-          votre inscription, aux prénoms et âges des membres de votre famille ainsi
-          qu'à votre localisation. Vous aurez quant à vous accès à sa bio, son prénom
-          et sa localisation.
+          Un prêtre ou un diacre dont vous serez le parrain va vous être attribué. Celui-ci aura accès à votre bio remplie lors de votre inscription, aux prénoms et âges des membres de votre famille ainsi
+          qu'à la ville dans laquelle vous habitez. Vous aurez quant à vous accès à sa bio, son prénom
+          ainsi que la ville dans laquelle il réside.
         </p>
         <p class="row">
           Dans un souci de simplicité, le site suggère une attribution entre famille
@@ -37,10 +34,10 @@
           limite à une relation de prière et de soutien spirituel.
         </p>
         <p class="row">
-          Vous recevrez automatiquement un mail lorsqu'un prêtre ou un diacre vous
+          Vous recevrez alors un mail lorsqu'un prêtre ou un diacre vous
           sera attribué.
         </p>
-        <button class="btn btn-home text-center" style="margin-bottom: 40px">Vous êtes en attente de l'attribution d'un prêtre ou d'un diacre</button>
+        <!-- <button class="btn btn-home text-center" style="margin-bottom: 40px">Vous êtes en attente de l'attribution d'un prêtre ou d'un diacre</button> -->
       <% end %>
 
       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
