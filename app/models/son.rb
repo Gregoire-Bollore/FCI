@@ -11,6 +11,7 @@ class Son < ActiveRecord::Base
   validates :email, uniqueness: true
 
 
+
   private
 
   def send_welcome_email

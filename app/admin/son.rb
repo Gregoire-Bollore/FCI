@@ -2,6 +2,7 @@ ActiveAdmin.register Son do
   permit_params :first_name, :last_name, :ordination_date, :address, :street_number, :route,
   :postal_code, :locality, :administrative_area_level_1, :country, :bio
 
+
   index do
     selectable_column
     column :id
@@ -9,9 +10,11 @@ ActiveAdmin.register Son do
     column :last_name
     column :email
     column :ordination_date
+    column "# de parrainages", :sponsorships, sortable: :sponsorships do |son|
+      son.sponsorships.count
+    end
     column :address
     column :bio
-    column :created_at
     actions
   end
 end
