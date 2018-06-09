@@ -19,7 +19,7 @@
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <% if current_family.admin %>
               <li>
-                <%= link_to admin_root_path(current_family) do %>
+                <%= link_to admin_root_path(current_family), target: :_blank do %>
                   <i class="fa fa-cogs"></i> <%= t(".dashboard", default: "Tableau de bord") %>
                 <% end %>
               </li>
