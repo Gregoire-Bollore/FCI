@@ -10,9 +10,7 @@ ActiveAdmin.register Son do
     column :last_name
     column :email
     column :ordination_date
-    column "# de parrainages", :sponsorships, sortable: :sponsorships do |son|
-      son.sponsorships.count
-    end
+    column "# de parrainages", :number_of_sponsorships, sortable: :number_of_sponsorships
     column :address
     column :bio
     actions

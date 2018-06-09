@@ -1,5 +1,5 @@
 class Son < ActiveRecord::Base
-  after_create :attribute_family, :send_welcome_email, :send_maman_email
+  after_create :send_welcome_email, :send_maman_email
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
   has_many :sponsorships, dependent: :destroy
