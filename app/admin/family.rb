@@ -14,4 +14,21 @@ ActiveAdmin.register Family do
     column :admin
     actions
   end
+
+  form do |f|
+    f.inputs "Famille du Cœur Immaculé" do
+      f.input :last_name
+      f.input :first_names_and_ages
+      f.input :bio
+    end
+    # f.inputs "Adresse" do
+    #   f.input :address
+    #   f.input :street_number
+    #   f.input :route
+    #   f.input :postal_code
+    #   f.input :locality
+    #   f.input :administrative_area_level_1
+    #   f.input :country
+    # end
+  end
 end
