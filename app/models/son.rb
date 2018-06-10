@@ -10,7 +10,9 @@ class Son < ActiveRecord::Base
   validates :first_name, :last_name, :level, :ordination_date, :phone_number, :address, :street_number, :route, :postal_code, :locality, :administrative_area_level_1, :country, :bio, presence: true
   validates :email, uniqueness: true
 
-
+  def display_name
+    return self.level + ' - ' + self.last_name + " - # de parrainages (" + self.number_of_sponsorships.to_s + ")"
+  end
 
   private
 
