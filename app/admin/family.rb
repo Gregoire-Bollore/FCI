@@ -9,6 +9,7 @@ ActiveAdmin.register Family do
     column :email
     column :address
     column :bio
+    column "# de parrainages", :number_of_sponsorships, sortable: :number_of_sponsorships
     column :created_at
     column :admin
     actions

@@ -10,9 +10,9 @@ ActiveAdmin.register Son do
     column :last_name
     column :email
     column :ordination_date
-    column "# de parrainages", :number_of_sponsorships, sortable: :number_of_sponsorships
     column :address
     column :bio
+    column "# de parrainages", :number_of_sponsorships, sortable: :number_of_sponsorships
     actions
   end
 end
