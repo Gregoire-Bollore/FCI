@@ -6,6 +6,7 @@ class Sponsorship < ActiveRecord::Base
     @sponsorship_family = Family.where(id: self.family_id).first
     @sponsorship_son = Son.where(id: self.son_id).first
     if @sponsorship_family == nil || @sponsorship_son == nil
+      return nil
     else
       return 'Famille  - ' + @sponsorship_family.last_name + " || " + @sponsorship_son.level + " - " + @sponsorship_son.last_name
     end
