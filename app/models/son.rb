@@ -28,8 +28,8 @@ class Son < ActiveRecord::Base
     "#{first_name} #{last_name}"
   end
 
-  def attribute_family
-    Sponsorship.create
-  end
+  # def attribute_family
+  #   Sponsorship.create
+  # end
 
 end
