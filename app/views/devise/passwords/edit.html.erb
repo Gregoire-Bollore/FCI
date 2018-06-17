@@ -8,10 +8,10 @@
 
   <div class="form-inputs container">
     <div class="row">
-      <div class="col-sm-offset-3 col-xs-12 col-sm-6"><%= f.input :password, label: false, required: true, , placeholder: t(".new_password"), autofocus: true %></div>
+      <div class="col-sm-offset-3 col-xs-12 col-sm-6"><%= f.input :password, label: false, required: true, placeholder: t(".new_password"), autofocus: true %></div>
     </div>
     <div class="row">
-      <div class="col-sm-offset-3 col-xs-12 col-sm-6"><%= f.input :password_confirmation, label: t(".confirm_new_password"), required: true %></div>
+      <div class="col-sm-offset-3 col-xs-12 col-sm-6"><%= f.input :password_confirmation, label: false, placeholder: t(".confirm_new_password"), required: true %></div>
     </div>
   </div>
 
