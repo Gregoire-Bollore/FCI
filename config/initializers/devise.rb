@@ -13,7 +13,7 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = 'contact@famillesducoeurimmacule.com'
-  config.secret_key = '0bff83795b24e623defb982373d9f69558da7a7d45a4dd6e11cc0eea4f5defce45c74bb7fcb8998007b4990c6140d6ad002a1bd6e0e64881ec961cd918603e54'
+
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
