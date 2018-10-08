@@ -1,0 +1,16 @@
+<p>
+  Une famille vous a été attitrée !<br/>
+  <br/>
+  Voici ci-dessous les informations concernant la famille :
+  <br/>
+    <p><strong>Nom : </strong><%= @family.last_name %></p>
+    <p><strong>Prénoms et âges des enfants : </strong><%= @family.first_names_and_ages %></p>
+    <p><strong>Biographie : </strong><%= @family.bio %></p>
+    <p><strong>Pays : </strong><%= @family.country %></p>
+    <p><strong>Région : </strong><%= @family.administrative_area_level_1 %></p>
+  <br/>
+  <br/>
+  Nous vous invitons à vous rendre sur votre espace personnel en  <a href="https://www.famillesducoeurimmacule.com/sons/<%= @son.id %>">cliquant ici</a> pour en savoir plus.
+  <br/>
+  L'équipe FCI
+</p>

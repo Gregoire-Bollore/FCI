@@ -1,0 +1,16 @@
+<p>
+  Un <%= @son.level %> vous a été attitré !<br/>
+  <br/>
+  Voici ci-dessous les informations concernant le <%= @son.level %> :
+  <br/>
+    <p><strong>Nom : </strong><%= @son.last_name %></p>
+    <p><strong>Date d'ordination : </strong><%= @son.ordination_date.strftime("%d/%m/%Y") %></p>
+    <p><strong>Biographie : </strong><%= @son.bio %></p>
+    <p><strong>Pays : </strong><%= @son.country %></p>
+    <p><strong>Région : </strong><%= @son.administrative_area_level_1 %></p>
+  <br/>
+  <br/>
+  Nous vous invitons à vous rendre sur votre espace personnel en  <a href="https://www.famillesducoeurimmacule.com/families/<%= @family.id %>">cliquant ici</a> pour en savoir plus.
+  <br/>
+  L'équipe FCI
+</p>
